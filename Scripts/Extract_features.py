@@ -86,3 +86,9 @@ from .disentangled_attention import *
       return (all_encoder_layers, att_matrixs)
     else:
       return all_encoder_layers
+   
+  query_states =  layer_module.fit_transform(query_states,label_train)
+
+	 relative_pos=  layer_module.transform( relative_pos)
+
+	return [relative_pos,query_states]
