@@ -5,6 +5,12 @@ Our Basic approach mainly works with first Pretraining the DeBerta model on the 
 # Requirements & Installations :
 Since we are using Sciket Learn and Torch -Pytorch libraries for the deployment of DeBERTa , hence we need to install the following :
 
+   # For Google Colab : 
+     ```
+      pip install deberta
+      
+      ```
+
 
 
 
