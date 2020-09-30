@@ -6,8 +6,14 @@ Our Basic approach mainly works with first Pretraining the DeBerta model on the 
 Since we are using Sciket Learn and Torch -Pytorch libraries for the deployment of DeBERTa , hence we need to install the following :
 
  ### For Google Colab & Python Server Deployments : 
-     !pip install deberta
-     !pip install transformers
+     !pip install deberta // to install all the deberta model requirements 
+     !pip install transformers 
+     !pip install torch 
+     !pip install pytorch 1.3.0
+     !curl 
+     !docker(optional if you run the data in docker)
+     !Ubuntu 18.04 LTS e.g Linux server deployments
+     !nvdia-docker-2 (optional)
      
       
       
