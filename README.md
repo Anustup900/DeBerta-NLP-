@@ -21,7 +21,22 @@ Since we are using Sciket Learn and Torch -Pytorch libraries for the deployment 
   This Installations should be done before to run this DeBERTa script for Amazon review data set for Cross-Domain Sentiment calssification. 
   ### About the Data : 
 The Data is being collected from Amazon Review data site : [Data](http://jmcauley.ucsd.edu/data/amazon/). The Data of kitchen ,Books ,DVD ,Video is used for the cross domain classification . First the model is trained and finetuned on a single data then tested on the other Data . Here Data preprocessing is done by using Tf-df vectorizer concept , for masking the vectors and pass it to the DeBERTa model for complete processing . More details about [tf-idf-vectorizer](https://www.google.com/search?q=tf-idf+vectorizer&oq=tf-df+&aqs=chrome.3.69i57j0l7.3633j0j7&sourceid=chrome&ie=UTF-8) can be found over here . This approach is used with some supporting python Libraries like NLTK for extracing the features out of it in the form of a key word extracion then passed for a vectorization for better preprocessing approach , This follows a hybrid architecture . This kind of approach being previously used by python paclage [Spacy](https://spacy.io/) in this [paper](https://github.com/deepopinion/domain-adapted-atsc). We followe the approach with a different pacakge for better accuracy of pre processing . Though both approaches can be used for expecting accuracy of >95%.
-The Data is more than size of 1GB hence for handling this Big Datas we followed of the approach of saving the storing the data into XML format inside the file [dataset](https://github.com/Anustup900/DeBerta-NLP-/tree/master/Dataset)
+The Data is more than size of 1GB hence for handling this Big Datas we followed of the approach of saving the storing the data into XML format inside the file [dataset](https://github.com/Anustup900/DeBerta-NLP-/tree/master/Dataset).
+
+### About DeBERTa Apprpoach : 
+
+DeBERTa (Decoding-enhanced BERT with disentangled attention) improves the BERT and RoBERTa models using two novel techniques. The first is the disentangled attention mechanism, where each word is represented using two vectors that encode its content and position, respectively, and the attention weights among words are computed using disentangled matrices on their contents and relative positions. Second, an enhanced mask decoder is used to replace the output softmax layer to predict the masked tokens for model pretraining. We show that these two techniques significantly improve the efficiency of model pre-training and performance of downstream tasks.
+
+Since DeBERTa is a very new algorithms it have some pretrained model as well a self deployable code for implementing the algorithm as an NLP approach in a dataset. So we did the second one as per the DeBERTa proposed code base we used DeBERTa on the above mentioned dataset to find the best fit accuracy over BERT as well other BERT models like RoBERTa, AlBERTa etc. 
+
+DeBERTa is still unsupported in tensorflow estimators , Sciket Learn Library for a redy made call that will only deal with mathematical computation and Pytorch ,The deployed torch module of the deberta that calls its installaed library after installation in the form of [torch.nn.module](https://deberta.readthedocs.io/en/latest/modules/deberta.html#deberta-model) is : 
+```
+from transformers import AutoTokenizer, AutoModel
+tokenizer = AutoTokenizer.from_pretrained("DeBERTa/deberta-base")
+model = AutoModel.from_pretrained("DeBERTa/deberta-base")
+     
+    
+
 
      
       
