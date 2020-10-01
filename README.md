@@ -34,14 +34,13 @@ DeBERTa is still unsupported in tensorflow estimators , Sciket Learn Library for
 from transformers import AutoTokenizer, AutoModel
 tokenizer = AutoTokenizer.from_pretrained("DeBERTa/deberta-base")
 model = AutoModel.from_pretrained("DeBERTa/deberta-base")
+```
+This is the deployed pytorch API used for DeBERTa Deployment in transformer approach , this approach we used to deploy the transformers in our Code.The [documentation](https://huggingface.co/DeBERTa/deberta-base) regarding this speaks of it is deployed in the[ Hugging face transformers ](https://github.com/huggingface/transformers) .This hugging face transformers are pytorch supported transformer library which stores all the transformer approaches in FAST AI . It deals with GPT2, DeBERTa BASE ,Lm Transformers . Hence it is used in this approach . 
+
+More about Deberta can be found [here](https://deberta.readthedocs.io/en/latest/modules/deberta.html#). 
      
     
 
 
      
-      
-      
-
-
-
-
+  
