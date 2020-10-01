@@ -61,7 +61,7 @@ Prepare the finetuning corpus, here shown for a test corpus "dev_corpus.txt":
 
     python pregenerate_training_data.py \
     --train_corpus dev_corpus.txt \
-    --bert_model deberta-base-uncased --do_lower_case \
+    --deberta_model deberta-base-uncased --do_lower_case \
     --output_dir dev_corpus_prepared/ \
     --epochs_to_generate 2 --max_seq_len 256
 
@@ -70,7 +70,7 @@ Run actual finetuning with:
 
     python finetune_on_pregenerated.py \
     --pregenerated_data dev_corpus_prepared/ \
-    --bert_model deberta-base-uncased --do_lower_case \
+    --deberta_model deberta-base-uncased --do_lower_case \
     --output_dir dev_corpus_finetuned/ \
     --epochs 2 --train_batch_size 16
 
