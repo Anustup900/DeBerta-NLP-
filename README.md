@@ -37,7 +37,19 @@ model = AutoModel.from_pretrained("DeBERTa/deberta-base")
 ```
 This is the deployed pytorch API used for DeBERTa Deployment in transformer approach , this approach we used to deploy the transformers in our Code.The [documentation](https://huggingface.co/DeBERTa/deberta-base) regarding this speaks of it is deployed in the[ Hugging face transformers ](https://github.com/huggingface/transformers) .This hugging face transformers are pytorch supported transformer library which stores all the transformer approaches in FAST AI . It deals with GPT2, DeBERTa BASE ,Lm Transformers . Hence it is used in this approach . 
 
-More about Deberta can be found [here](https://deberta.readthedocs.io/en/latest/modules/deberta.html#). 
+More about Deberta can be found [here](https://deberta.readthedocs.io/en/latest/modules/deberta.html#).
+
+### Additional Algorithms used over here and why ?
+ For Transformers in comparison to the main paper : 
+ 
+ They used LM transformers for the BERT Deployments from Hugging Face transformers [Github](https://github.com/huggingface/transformers).This transformer is supported by BERT algorithms hence deployed . 
+ We used GPT2 transformer for DeBERTa Deployment as mentioned by Microsoft [here](https://deberta.readthedocs.io/en/latest/modules/deberta.html#gpt2tokenizer), Find more about GPT2 over [here](https://openai.com/blog/better-language-models/) .
+ For the GPT2 deployment we took the help from Hugging face [repo](https://github.com/huggingface/transformers/tree/master/src/transformers)
+ ```
+ Step 1 : DeBERTa Configuration : python3 run DeBerta-NLP-/Finetuning and Classification/configuration/DeBERTa.py
+ Step 2 : GPT2 Configuration : python3 run  DeBerta-NLP-/Finetuning and Classification/configuration/gpt2 configuration.py
+ ```
+ The above steps we used for the Model configuration, Now we taken
      
     
 
