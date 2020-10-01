@@ -49,10 +49,29 @@ More about Deberta can be found [here](https://deberta.readthedocs.io/en/latest/
  Step 1 : DeBERTa Configuration : python3 run DeBerta-NLP-/Finetuning and Classification/configuration/DeBERTa.py
  Step 2 : GPT2 Configuration : python3 run  DeBerta-NLP-/Finetuning and Classification/configuration/gpt2 configuration.py
  ```
- The above steps we used for the Model configuration, Now we taken
-     
+ The above steps we used for the Model configuration, Now we taken steps for deploying the GPT2 deployment , before that we taken the reference of the [paper](https://github.com/deepopinion/domain-adapted-atsc).They have used [LM transformers](https://github.com/deepopinion/domain-adapted-atsc/blob/master/finetuning_and_classification/finetune_on_pregenerated.py).This is their deployed code base. We taken the reference from their approach and from the Documentation of [Lm Finetuning](https://github.com/huggingface/transformers/blob/v1.0.0/examples/lm_finetuning/finetune_on_pregenerated.py) 
+ 
+ Based on the above we implemented the GPT2 transformer by the following approach : 
+ 
+GPT2 Transformer :
+
+The GPT2 finetuning code is an adaption to a script from [1](https://github.com/huggingface/transformers/tree/v1.0.0/examples/lm_finetuning) and [2](https://deberta.readthedocs.io/en/latest/_modules/DeBERTa/deberta/gpt2_tokenizer.html#GPT2Tokenizer) and deployed [into](https://github.com/Anustup900/DeBerta-NLP-/tree/master/Finetuning%20and%20Classification)
+
+Prepare the finetuning corpus, here shown for a test corpus "dev_corpus.txt":
+
+    python pregenerate_training_data.py \
+    --train_corpus dev_corpus.txt \
+    --bert_model deberta-base-uncased --do_lower_case \
+    --output_dir dev_corpus_prepared/ \
+    --epochs_to_generate 2 --max_seq_len 256
+
+
+Run actual finetuning with:
+
+    python finetune_on_pregenerated.py \
+    --pregenerated_data dev_corpus_prepared/ \
+    --bert_model deberta-base-uncased --do_lower_case \
+    --output_dir dev_corpus_finetuned/ \
+    --epochs 2 --train_batch_size 16
+
     
-
-
-     
-  
