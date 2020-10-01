@@ -14,6 +14,11 @@ Since we are using Sciket Learn and Torch -Pytorch libraries for the deployment 
      !docker(optional if you run the data in docker)
      !Ubuntu 18.04 LTS e.g Linux server deployments
      !nvdia-docker-2 (optional)
+     !bash -shell (optional)
+     !pip install sciket-learn
+     !install nltk (NLP Library)
+  
+  This Installations should be done before to run this DeBERTa script for Amazon review data set for Cross-Domain Sentiment calssification. 
      
       
       
