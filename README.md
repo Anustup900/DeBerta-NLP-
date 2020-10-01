@@ -19,6 +19,8 @@ Since we are using Sciket Learn and Torch -Pytorch libraries for the deployment 
      !install nltk (NLP Library)
   
   This Installations should be done before to run this DeBERTa script for Amazon review data set for Cross-Domain Sentiment calssification. 
+  ### About the Data : 
+  The Data is being collected from Amazon Review data site : [Data](http://jmcauley.ucsd.edu/data/amazon/)
      
       
       
