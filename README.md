@@ -73,5 +73,14 @@ Run actual finetuning with:
     --deberta_model deberta-base-uncased --do_lower_case \
     --output_dir dev_corpus_finetuned/ \
     --epochs 2 --train_batch_size 16
-
     
+Classification : 
+
+The Classification by the DeBERTa Approach is done by the help of [Bert Layer Norm-DeBERTA](https://deberta.readthedocs.io/en/latest/modules/deberta.html#bertlayernorm) , Bert Calssifier , Random Sampler ,BERT sequitial learner and [others](https://github.com/Anustup900/DeBerta-NLP-/blob/master/Finetuning%20and%20Classification/Run_glue_tests.py).This all are mentioned in the DeBERTa Docs.
+
+To Run a Glue test two reference is taken into account : 
+
+1.) DeBERTa: [DeBERTa Experiments](https://github.com/microsoft/DeBERTa/tree/master/experiments/glue)
+
+2.) Paper : [Here] (https://github.com/huggingface/pytorch-transformers/blob/v1.0.0/examples/run_glue.py)
+
