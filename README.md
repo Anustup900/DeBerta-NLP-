@@ -87,5 +87,7 @@ To Run a Glue test two reference is taken into account :
 ### Results : 
 
 DeBERTA promised 95.50 % Above accuracy which crosses accuracy of other algorithms like XLnet (95.34 %) , BERT (94 %) etc.
-[figure](https://github.com/Anustup900/DeBerta-NLP-/blob/master/Figures/Table.PNG)
+
+
+![alt text](https://github.com/Anustup900/DeBerta-NLP-/blob/master/Figures/Table.PNG)
 
