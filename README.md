@@ -91,3 +91,6 @@ DeBERTA promised 95.50 % Above accuracy which crosses accuracy of other algorith
 
 ![alt text](https://github.com/Anustup900/DeBerta-NLP-/blob/master/Figures/Table.PNG)
 
+
+![alt text](https://github.com/Anustup900/DeBerta-NLP-/blob/master/Figures/DeBerta.jpg)
+
